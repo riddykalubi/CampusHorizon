@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="IMG-20260406-WA0013.jpg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Horizon - Activités</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* 
+
+
+
+
+
+
+:root {
+  --primary-color: #ebf70b;   
+}
+
+.category-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+:root {
+  --primary-color: #004a99;   
+  --secondary-color: #f8f9fa; 
+  --accent-color: #00a8e8;    
+  --text-dark: #2d3436;
+  --text-light: #636e72;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+
+    
+h1 {
+  color: rgb(238, 251, 6);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+
+nav a {
+    color: white;
+    margin-left: 25 px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+nav {
+        margin-top: 10px;
+    }
+
+main {
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #002147;
+}
+
+.intro-text {
+    margin-top: 10px;
+    color: #555;
+}
+
+#liste-activites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.activity-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card h2 {
+    color: #002147;
+    margin-bottom: 10px;
+}
+
+.activity-card ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+figure {
+    margin-top: 40px;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.hero {
+    margin-top: 60px;
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('conference-mai.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    background: url("https://media.istockphoto.com/id/1303837116/fr/photo/groupe-de-cinq-%C3%A9tudiants-africains-duniversit%C3%A9.jpg?s=612x612&w=0&k=20&c=HPkyBPaSrRVqlCxubMzry_NHdeLiUWfr0ve6mQf23RI=") no-repeat center/cover;
+
+
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+footer {
+    margin-top: 60px;
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #00bcd4;
+}
+
+body {
+    margin: 0;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 33, 71, 0.7); 
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+    
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+
+
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.o {
+    background-color: rgba(0, 33, 71, 0.7);
+}
+.overlay h2 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.overlay h2,
+.overlay p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.overlay p {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } }  
+
+    #success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #002147;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+}
+
+.socials a {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.sexe {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.sexe {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+.sexe {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.radio-box {
+    display: block;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-box:hover {
+    background: #e0e0e0;
+}
+
+.radio-box input {
+    margin-right: 10px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #002147;
+    border-radius: 10px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="IMG-20260406-WA0013.jpg" alt="logo">
+        <h1>CAMPUS HORIZON</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="page2.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html">Contact</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="page-header">
+    <h1>Nos Activités</h1>
+    <p class="intro-text">Découvrez tout ce que nous faisons pour développer les étudiants.</p>
+</section>
+
+<section id="liste-activites">
+
+<article class="activity-card">
+    <h2>Conférences</h2>
+    <p>Des échanges enrichissants avec des experts.</p>
+    <ul>
+        <li>Thèmes variés</li>
+        <li>Photos et résumés</li>
+    </ul>
+</article>
+
+<article class="activity-card">
+    <h2>Ateliers</h2>
+    <p>Apprentissage pratique et interactif.</p>
+    <ul>
+        <li>Communication</li>
+        <li>Leadership</li>
+    </ul>
+</article>
+
+<article class="activity-card">
+    <h2>Formations</h2>
+    <p>Développement académique et professionnel.</p>
+    <ul>
+        <li>Compétences clés</li>
+        <li>Suivi des progrès</li>
+    </ul>
+</article>
+
+<article class="activity-card">
+    <h2>Projets</h2>
+    <p>Des initiatives innovantes par les étudiants.</p>
+    <ul>
+        <li>Impact réel</li>
+        <li>Travail en équipe</li>
+    </ul>
+</article>
+
+</section>
+
+<figure>
+    <img src="conference-mai.jpg" alt="Conférence">
+    <figcaption>Conférence - échange avec les intervenants</figcaption>
+</figure>
+
+<section class="hero">
+    <h2>Rejoignez-nous dès aujourd'hui </h2>
+</section>
+
+</main>
+
+<footer>
+    <div class="socials">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+    
+
+</div>
+
+    <p>© Campus Horizon</p>
+</footer>
+
+</body>
+</html>
