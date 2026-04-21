@@ -1,0 +1,642 @@
+/* RESET */
+•	{
+    Margin : 0 ;
+    Padding : 0 ;
+    Box-sizing : border-box ;
+    Font-family : « Segoe UI », sans-serif ;
+}
+
+/* CONTAINER */
+.contact-container {
+    Padding : 150px 10% ;
+    Background : #f5f7fa ;
+}
+
+/* HEADER */
+.contact-header {
+    Text-align : center ;
+    Margin-bottom : 40px ;
+}
+
+.contact-header h1 {
+    Font-size : 2.5rem ;
+    Color : #222 ;
+    Margin-bottom : 10px ;
+}
+
+.contact-header p {
+    Color : #666 ;
+    Font-size : 1rem ;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+    Display : flex ;
+    Gap : 30px ;
+    Flex-wrap : wrap ;
+}
+
+/* SECTIONS */
+.contact-info,
+.contact-form {
+    Background : white ;
+    Padding : 25px ;
+    Border-radius : 12px ;
+    Box-shadow : 0 10px 25px rgba(0,0,0,0.05) ;
+    Flex : 1 ;
+    Min-width : 300px ;
+}
+
+/* TITLES */
+.contact-info h2,
+.contact-form h2 {
+    Margin-bottom : 20px ;
+    Color : #111 ;
+}
+
+/* INFO ITEMS */
+.info-item {
+    Display : flex ;
+    Align-items : flex-start ;
+    Gap : 15px ;
+    Margin-bottom : 20px ;
+}
+
+.icon {
+    Font-size : 1.5rem ;
+}
+
+.info-item h3 {
+    Font-size : 1rem ;
+    Margin-bottom : 5px ;
+}
+
+.info-item p {
+    Color : #555 ;
+    Font-size : 0.9rem ;
+}
+
+/* SOCIAL */
+.social-links {
+    Margin-top : 20px ;
+}
+
+.social-links .icons a {
+    Text-decoration : none ;
+    Color : #0077ff ;
+    Font-weight : 500 ;
+}
+
+.social-links .icons a :hover {
+    Text-decoration : underline ;
+}
+
+/* FORM */
+.form-group {
+    Margin-bottom : 15px ;
+}
+
+.form-group label {
+    Display : block ;
+    Margin-bottom : 5px ;
+    Font-size : 0.9rem ;
+    Color : #333 ;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    Width : 100% ;
+    Padding : 10px ;
+    Border-radius : 8px ;
+    Border : 1px solid #ccc ;
+    Font-size : 0.9rem ;
+    Transition : 0.3s ;
+}
+
+
+.form-group input :focus,
+.form-group select :focus,
+.form-group textarea :focus {
+    Border-color : #0077ff ;
+    Outline : none ;
+    Box-shadow : 0 0 5px rgba(0,119,255,0.2) ;
+}
+
+
+.submit-btn {
+    Width : 100% ;
+    Padding : 12px ;
+    Background : #0077ff ;
+    Color : white ;
+    Border : none ;
+    Border-radius : 8px ;
+    Font-size : 1rem ;
+    Cursor : pointer ;
+    Transition : 0.3s ;
+}
+
+.submit-btn :hover {
+    Background : #005fd1 ;
+}
+
+/* RESPONSIVE */
+@media (max-width : 768px) {
+    .contact-wrapper {
+        Flex-direction : column ;
+    }
+}
+
+
+body {
+    margin: 0;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 33, 71, 0.7); 
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+    
+}
+nav a:hover {
+    color: #00bcd4;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.hero {
+    
+    height: 80vh;
+    background: url("https://img.freepik.com/photos-premium/groupe-jeunes-directeurs-financiers-interculturels-tenue-decontractee-discutant-documents-diagrammes-graphiques-lors-reunion-travail-sol_274679-21636.jpg") no-repeat center/cover;
+}
+
+
+
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.o {
+    background-color: rgba(0, 33, 71, 0.7);
+}
+.overlay h2 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.overlay h2,
+.overlay p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.overlay p {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } }  
+
+    #success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #002147;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+}
+
+.socials a {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.sexe {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.sexe {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+.sexe {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.radio-box {
+    display: block;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-box:hover {
+    background: #e0e0e0;
+}
+
+.radio-box input {
+    margin-right: 10px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #002147;
+    border-radius: 10px;
+}
+
+    blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+
+
+.overlay {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.slogan {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: white;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#dynamic-text {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+}
+
+
+.presentation {
+    font-family: monospace;
+    font-style:initial;
+    
+}
+
+
+
+
+/* Variables spécifiques à la page News */
+:root {
+    --announcement-color: #e74c3c; /* Rouge pour l'urgence/officiel */
+    --event-color: #2ecc71;       /* Vert pour l'agenda */
+    --project-color: #f1c40f;      /* Jaune pour l'innovation */
+    --achievement-color: #9b59b6;  /* Violet pour le succès */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.news-card {
+    background: #fff;
+    border-left: 10px solid #ccc; /* Couleur par défaut */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Couleurs par catégorie */
+.announcement { border-left-color: var(--announcement-color); }
+.event { border-left-color: var(--event-color); }
+.project { border-left-color: var(--project-color); }
+.achievement { border-left-color: var(--achievement-color); }
+
+.category-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+/* Personnalisation des tags selon le parent */
+.announcement .category-tag { background: var(--announcement-color); }
+.event .category-tag { background: var(--event-color); }
+.project .category-tag { background: var(--project-color); }
+.achievement .category-tag { background: var(--achievement-color); }
+
+.news-card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.read-more {
+    margin-top: auto;
+    padding-top: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive pour tablettes et mobiles */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    main{
+        padding-top: 100px;
+    }
+}
+
+
+
+:root {
+  /* Couleurs de votre logo */
+  --logo-blue: #0056b3;
+  --sun-yellow: #ffcc00;
+  --sun-orange: #f39c12; /* Pour les dégradés ou survol */
+  
+  --bg-white: #ffffff;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --light-gray: #f4f7f6;
+  
+  --shadow: 0 4px 12px rgba(0, 54, 179, 0.08);
+  --border-radius: 12px;
+}
+
+
+
+/* --- TITRES ET ENTÊTES --- */
+h1, h2, h3 {
+  color: var(--logo-blue);
+  font-weight: 700;
+}
+
+
+
+/* --- CARTES ET SECTIONS --- */
+.pôle, .activity-card, .news-card {
+  background: var(--bg-white);
+  border: 1px solid #e1e8ed;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Effet "Soleil" au survol : une bordure jaune qui s'illumine */
+.pôle:hover, .activity-card:hover, .news-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--sun-yellow);
+  box-shadow: 0 12px 20px rgba(255, 204, 0, 0.15);
+}
+
+/* --- ACCENTS SPÉCIFIQUES --- */
+
+/* Puces de listes aux couleurs du soleil */
+ul li::marker {
+  color: var(--sun-orange);
+  font-size: 1.2rem;
+}
+
+/* Tags pour la page Actualités */
+.category-tag {
+  background-color: var(--logo-blue);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* Boutons d'action */
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--logo-blue);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid var(--sun-yellow);
+  transition: color 0.2s;
+}
+
+.read-more:hover {
+  color: var(--sun-orange);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .news-grid, #organes-direction, #poles-operationnels {
+    grid-template-columns: 1fr !important;
+    padding: 15px;
+  }
+}
+

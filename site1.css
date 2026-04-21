@@ -1,0 +1,302 @@
+
+body {
+    margin: 0;
+    
+}
+
+header .btn{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    
+    
+    padding: 12px 25px;
+    background: linear-gradient(#FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    display: flex;
+    
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 33, 71, 0.7); 
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+    
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+.hero {
+    height: 100vh;
+    background: url("IMG-20260407-WA0004.jpg") no-repeat center/cover;
+}
+
+
+
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.o {
+    background-color: rgba(0, 33, 71, 0.7);
+}
+.overlay h2 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+header .btn:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding-top: 240px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.overlay h2,
+.overlay p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.overlay p {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } }  
+
+    #success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #002147;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+    header .btn{
+        position: relative;
+    top: 0px;
+    right: 20px;
+    padding: 10px;
+    
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    display: block;
+    
+    
+    }
+
+}
+
+.socials a {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.sexe {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.sexe {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+.sexe {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.radio-box {
+    display: block;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-box:hover {
+    background: #e0e0e0;
+}
+
+.radio-box input {
+    margin-right: 10px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #002147;
+    border-radius: 10px;
+}
+
+

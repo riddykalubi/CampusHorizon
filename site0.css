@@ -1,0 +1,426 @@
+
+body {
+    margin: 0;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 33, 71, 0.7); 
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+    
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #00bcd4;
+}
+
+.hero {
+    height: 100vh;
+    background: url("https://www.carnets-de-traverse.com/blog/wp-content/uploads/2018/07/00-Blog-Voyage-Bibliotheque-Monde-Inspiration-954x477.jpg") no-repeat center/cover;
+}
+
+
+
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.o {
+    background-color: rgb(255, 223, 34);
+}
+.overlay h2 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.overlay h2,
+.overlay p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.overlay p {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } }  
+
+    #success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #002147;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+}
+
+.socials a {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.sexe {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.sexe {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+.sexe {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.radio-box {
+    display: block;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-box:hover {
+    background: #e0e0e0;
+}
+
+.radio-box input {
+    margin-right: 10px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #002147;
+    border-radius: 10px;
+}
+
+    blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+
+
+.overlay {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.slogan {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: white;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#dynamic-text {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+}
+
+
+
+
+/* --- LIBRARY LAYOUT --- */
+.library-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.library-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--logo-blue);
+    color: var(--logo-blue);
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--logo-blue);
+    color: white;
+}
+
+/* --- RESOURCE CARDS --- */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    border: 1px solid #eee;
+    background: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.resource-type {
+    background: var(--sun-yellow); /* Rappel du soleil */
+    color: var(--logo-blue);
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resource-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.resource-info .category {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* --- ACTIONS (Boutons) --- */
+.actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.btn-read {
+    background: var(--logo-blue);
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-download {
+    background: var(--light-gray);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+.btn-download:hover {
+    background: var(--sun-yellow);
+    border-color: var(--sun-yellow);
+}

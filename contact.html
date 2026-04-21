@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Horizon</title>
+<link rel="stylesheet" href="sit.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+    
+<body>
+
+<header>
+    <div class="logo">
+        <img src="IMG-20260406-WA0013.jpg" alt="logo">
+        <h1>CAMPUS HORIZON</h1>
+    </div>
+
+    <nav>
+        <a href="Page1.3.html">Accueil</a>
+        <a href="page2.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html">Contact</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+    </nav>
+</header>
+
+
+<main class= contact-container>
+    <section class= contact-header>
+        <h1>Contactez CAMPUS HORIZON</h1>
+        <p>Une question ? Un projet ? Une envie de nous rejoindre ? Notre équipe est à votre écoute.</p>
+    </section>
+
+    <div class= contact-wrapper>
+        <section class= contact-info >
+            <h2>Nos coordonnées</h2>
+            <div class= info-item >
+                
+                <div>
+                    <h3>Siège social</h3>
+                    <p>Université de [Votre Ville], Pavillon [X]</p>
+                </div>
+            </div>
+            <div class= info-item>
+                <span class= icon>📧</span>
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class= info-item>
+                <span class= icon>📞</span>
+                <div>
+                    <h3>Téléphone</h3>
+                    <p>+243 834211447</p>
+                </div>
+            </div>
+            
+            <div class= social-links »>
+                <h3>Suivez-nous</h3>
+                <div class= icons>
+                     
+
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+    
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class= »contact-form »>
+            <h2>Envoyez-nous un message</h2>
+            <form action= »# » method= »post »>
+                <div class= »form-group »>
+                    <label for= »name »>Nom complet</label>
+                    <input type= »text » id= »name » name= »name » placeholder= »Ex : Jean Dupont » required>
+                </div>
+
+                <div class= »form-group »>
+                    <label for= »email »>Adresse Email</label>
+                    <input type= »email » id= »email » name= »email » placeholder= »nom@exemple.com » required>
+                </div>
+
+                <div class= »form-group »>
+                    <label for= »subject »>Objet de votre message</label>
+                    <select id= »subject » name= »subject »>
+                        <option value= »info »>Demande d’informations</option>
+                        <option value= »membership »>Adhésion au mouvement</option>
+                        <option value= »partnership »>Devenir partenaire</option>
+                        <option value= »library »>Question sur la bibliothèque</option>
+                    </select>
+                </div>
+
+                <div class= »form-group »>
+                    <label for= »message »>Message</label>
+                    <textarea id= »message » name= »message » rows= »5 » placeholder= »Comment pouvons-nous vous aider ? » required></textarea>
+                </div>
+
+                <button type= »submit » class= »submit-btn »>Envoyer le message</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+
+<footer>
+    
+    <div class="socials">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+    
+
+</div>
+
+    <p>© Campus Horizon</p>
+</footer>
+
+
+<script src="Site1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js"></script>
+<script>
+  const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    initialCountry: "cd",
+    separateDialCode: true
+  });
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/css/intlTelInput.min.css">
+</body>
+</html>

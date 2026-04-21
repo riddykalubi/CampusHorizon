@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Horizon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body {
+    margin: 0;
+    
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 33, 71, 0.7); 
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+    
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+.hero {
+    height: 100vh;
+    background: url("IMG-20260407-WA0004.jpg") no-repeat center/cover;
+}
+
+
+
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.o {
+    background-color: rgba(0, 33, 71, 0.7);
+}
+.overlay h2 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.overlay h2,
+.overlay p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.overlay p {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } }  
+
+    #success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #002147;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+    header .btnd{
+        position: relative;
+    top: 0px;
+    right: 20px;
+    padding: 10px;
+    
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    display: block;
+    
+    
+    }
+
+}
+
+.socials a {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.sexe {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.sexe {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+.sexe {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.radio-box {
+    display: block;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-box:hover {
+    background: #e0e0e0;
+}
+
+.radio-box input {
+    margin-right: 10px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #002147;
+    border-radius: 10px;
+}
+
+.logo img{width:45px;height:45px;border-radius:50%}
+
+h2{
+color:#002147;
+margin-bottom:20px;
+}
+
+section{
+margin-bottom:50px;
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+h3{margin-top:15px;color:#444}
+
+p{line-height:1.6;margin-bottom:10px}
+
+#activite h3{color:#002147}
+
+footer{
+background:#002147;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+
+.hero {
+    height: 100vh;
+    background: url("IMG-20260407-WA0019.jpg") no-repeat center/cover;
+}
+
+
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.o {
+    background-color: rgba(244, 244, 75, 0.7);
+}
+.overlay h2 {
+    font-size: 50px;
+}
+
+.overlay p {
+    font-size: 20px;
+}
+
+
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: #002147;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.overlay h2,
+.overlay p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.overlay p {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } }  
+
+    #success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #002147;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+     header .btn{
+        position: static;
+    top: 0px;
+    right: 20px;
+    padding: 10px;
+    
+    padding: 12px 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    display: block;
+    
+    
+    }
+
+}
+
+.socials a {
+    margin: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.sexe {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.sexe {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+
+.radio-box {
+    display: block;
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-box:hover {
+    background: #e0e0e0;
+}
+
+.radio-box input {
+    margin-right: 10px;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #002147;
+    border-radius: 10px;
+}
+
+    blockquote {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    padding: 10px 20px;
+    
+}
+
+
+
+.overlay {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.slogan {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: rgb(234, 246, 9);
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.presentation {
+    font-family: monospace;
+    font-style:initial;
+    
+}
+
+.hero {
+    padding-top: 200PX;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+header .btn{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    
+    
+    padding: 12px 25px;
+    background: linear-gradient(#FFD700, #FFA500);
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    display: flex;
+    
+    
+}
+
+header .btn:hover {
+    transform: scale(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="IMG-20260406-WA0013.jpg">
+        <h1>CAMPUS HORIZON</h1>
+    </div>
+    
+    
+    <nav>
+        <a href="Page1.3.html">Accueil</a>
+        <a href="page2.html">À propos</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="activites.html">Activités</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="contact.html">Contact</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+    </nav>
+</header>
+
+<section class="hero">
+<div>
+<blockquote id="dynamic-text"></blockquote>
+<h3 class="slogan">Innover. Inspirer. Influencer.</h3>
+</div>
+</section>
+
+<main>
+
+<section>
+<h2>Présentation</h2>
+
+
+    <p>CAMPUS HORIZON est un mouvement étudiant engagé dans l’excellence académique et le leadership.</p>
+    <p>Un espace où les étudiants développent leurs compétences et réalisent des projets à impact....</p>
+</section>
+<details>
+<summary class="o">...</summary>
+
+    <p>
+CAMPUS HORIZON est un mouvement étudiant engagé dans la promotion de l’excellence académique, du leadership responsable et de l’innovation intellectuelle au sein de la communauté universitaire.
+
+Le mouvement rassemble des étudiants motivés et ambitieux qui souhaitent contribuer activement à l’amélioration de leur environnement académique et au développement d’initiatives constructives au service de la communauté étudiante.
+
+CAMPUS HORIZON se veut un espace d’échanges, d’apprentissage et d’initiative, permettant aux étudiants de développer leurs compétences, de renforcer leur esprit critique et de s’impliquer dans des projets à impact positif.
+
+Histoire et vision
+CAMPUS HORIZON est né de la volonté de créer une dynamique nouvelle au sein du milieu universitaire, fondée sur la collaboration, la réflexion stratégique et l’engagement académique.
+
+Depuis sa conception, le mouvement poursuit une vision claire : contribuer à l’émergence d’une génération d’étudiants capables de penser de manière critique, d’agir avec responsabilité et d’exercer un leadership positif dans leur environnement académique et dans la société.
+
+À travers ses activités et ses initiatives, CAMPUS HORIZON aspire à devenir une référence en matière de mobilisation étudiante autour des valeurs d’excellence, de rigueur intellectuelle et d’engagement collectif.
+
+Mission
+La mission de CAMPUS HORIZON est de créer un cadre dynamique favorisant le développement intellectuel, académique et personnel des étudiants.
+    </p>
+<details>
+    
+    <summary class="o">...</summary>
+    <P>Le mouvement s’engage notamment à :
+
+encourager la réflexion critique et la culture du débat constructif ;
+
+promouvoir la réussite académique et la discipline dans les études ;
+
+offrir des opportunités de formation et de développement du leadership ;
+
+soutenir les initiatives étudiantes porteuses d’innovation et d’impact social.
+
+Objectifs principaux
+Afin de réaliser sa mission, CAMPUS HORIZON poursuit plusieurs objectifs stratégiques :
+
+favoriser l’excellence académique et la performance intellectuelle des étudiants ;
+
+développer les compétences en leadership et en gestion de projets ;
+
+créer des espaces d’échange, de formation et de collaboration entre étudiants ;
+
+encourager la participation active des étudiants à des initiatives académiques et sociales.
+
+Valeurs
+Les actions et initiatives de CAMPUS HORIZON reposent sur un ensemble de valeurs fondamentales qui orientent l’engagement de ses membres.
+
+Excellence
+Le mouvement encourage la recherche constante de la qualité et de la performance dans les études, les projets et les initiatives académiques.
+
+Discipline
+CAMPUS HORIZON valorise la rigueur, la responsabilité et le respect des engagements dans toutes les activités menées par ses membres.
+
+Innovation
+Le mouvement favorise la créativité, l’esprit d’initiative et la capacité à proposer des idées nouvelles face aux défis du milieu universitaire.
+
+Leadership
+CAMPUS HORIZON aspire à former des étudiants capables d’inspirer, de mobiliser et de conduire des initiatives positives au sein de leurs communautés.</p>
+</P>
+    </details>
+    <details>
+        <summary class="o">...</summary>
+         <p>
+            CAMPUS HORIZON est un mouvement étudiant dédié à la promotion de l’excellence académique,
+            du leadership éclairé et de l’engagement responsable au sein des universités.
+        </p>
+
+        <p>
+            Né de la volonté de rassembler des étudiants ambitieux autour d’une vision commune,
+            le mouvement vise à créer un espace dynamique où les idées, les talents et les initiatives
+            peuvent s’épanouir au service du progrès intellectuel et social.
+        </p>
+
+        <p>
+            La vision de CAMPUS HORIZON est de former une génération d’étudiants capables d’influencer
+            positivement leur environnement académique, professionnel et sociétal.
+        </p>
+
+        <p>
+            Sa mission consiste à encourager la réflexion critique, à stimuler l’excellence académique
+            et à promouvoir des initiatives qui renforcent les compétences, la responsabilité
+            et l’esprit d’engagement des étudiants.
+        </p>
+    </details>
+</details>
+
+<section id="vision">
+<h2>Vision</h2>
+<p>Former des étudiants capables d’impacter positivement leur environnement.</p>
+
+<h3>Leadership</h3>
+<p>Responsabilité, initiative et impact collectif.</p>
+
+<h3>Excellence</h3>
+<p>Rigueur intellectuelle et curiosité scientifique.</p>
+
+<h3>Impact</h3>
+<p>Créer des solutions concrètes pour la société.</p>
+</section>
+
+<details>
+<summary class="o">...</summary>
+ <p>
+            CAMPUS HORIZON ambitionne de contribuer à l’émergence d’une génération d’étudiants
+            capables d’exercer un leadership responsable, d’atteindre un haut niveau d’excellence académique
+            et de produire un impact positif et durable dans leurs communautés.
+        </p>
+
+        <h3>Leadership étudiant</h3>
+        <p>
+            Le mouvement encourage un leadership fondé sur la responsabilité, l’intégrité
+            et l’esprit d’initiative. Les étudiants sont formés à prendre des décisions réfléchies
+            et à mobiliser leurs pairs autour d’objectifs constructifs.
+        </p>
+
+        <h3>Excellence académique</h3>
+        <p>
+            CAMPUS HORIZON place la rigueur intellectuelle, la curiosité scientifique
+            et la recherche de la connaissance au cœur de son engagement.
+        </p>
+
+        <h3>Impact social</h3>
+        <p>
+            Le mouvement incite les étudiants à utiliser leurs compétences et leur créativité
+            pour apporter des solutions concrètes aux défis de leur environnement.
+        </p>
+    </details>
+<section id="activite">
+<h2>Activités</h2>
+
+<h3>Conférences</h3>
+<p>Échanges avec des experts.</p>
+
+<h3>Formations</h3>
+<p>Développement des compétences clés.</p>
+
+<h3>Projets</h3>
+<p>Initiatives étudiantes innovantes.</p>
+</section>
+
+<details>
+<summary class="o">...</summary>
+ <p>
+            Afin de concrétiser sa vision, CAMPUS HORIZON organise et soutient
+            diverses activités académiques, éducatives et collaboratives.
+        </p>
+
+        <h3>Conférences</h3>
+        <p>
+            Des conférences sont régulièrement organisées pour stimuler la réflexion
+            et favoriser les échanges avec des professionnels et universitaires.
+        </p>
+
+        <h3>Formations</h3>
+        <p>
+            Des sessions de formation permettent aux étudiants de développer leurs compétences
+            en leadership, communication, gestion de projets et méthodologie.
+        </p>
+
+        <h3>Projets étudiants</h3>
+        <p>
+            Les étudiants sont encouragés à collaborer sur des projets innovants,
+            visant à produire un impact positif dans leur environnement académique
+            et social.
+        </p>
+</details>
+
+
+
+<footer>
+    
+    <div class="socials">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+    </div>
+
+<p>© Campus Horizon</p>
+</footer>
+
+<script src="g.js"></script>
+
+</body>
+</html>
