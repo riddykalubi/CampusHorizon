@@ -140,13 +140,29 @@ footer {
 .popup-content {
     background: black;
     padding-top: 100px;
-    width: 100%;
+    
     border-radius: 10px;
     text-align: center;
     color:#FFD700;
     transform: scale(0.7);
     opacity: 0;
     transition: 0.3s;
+
+    
+    
+    padding: 20px;
+    width: 90%;
+    max-width: 500px; 
+    
+    
+
+    max-height: 85vh;
+    overflow-y: auto;
+
+   
+    
+    
+
 }
 
 .popup.show .popup-content {
