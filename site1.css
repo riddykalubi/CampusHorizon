@@ -263,7 +263,7 @@ blockquote {
 }
 
 .popup-content {
-    max-height: 80vh;
+    max-height: 40vh;
     overflow-y: auto; 
 }
 
@@ -299,4 +299,29 @@ blockquote {
     border-radius: 10px;
 }
 
+body {
+    margin: 0;
+    padding-top: 100px; /* adapte selon ton header */
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    margin: 10px;
+}
+
+.overlay h2 {
+    font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+    .overlay h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
 
