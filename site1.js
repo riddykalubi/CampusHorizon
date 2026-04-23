@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const popup = document.getElementById("popup");
     const close = document.querySelector(".close");
-    const btnd = document.querySelector(".btnd");
+    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "auto";
 
     btn.addEventListener("click", function(e){
         e.preventDefault();
