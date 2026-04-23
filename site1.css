@@ -159,7 +159,7 @@ footer {
 
     max-height: 85vh;
    
-    
+    position: relative;
     
 
 }
@@ -363,5 +363,23 @@ nav a {
     }
 }
 
+form {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.iti__country-list {
+    z-index: 9999 !important;
+}
+.sexe {
+  display: flex;
+  flex-direction: column; /* 🔥 IMPORTANT */
+  gap: 10px;
+  width: 100%;
+}
 
 
+.radio-box {
+    width: 100%;
+    box-sizing: border-box;
+}
