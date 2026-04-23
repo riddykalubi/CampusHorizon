@@ -325,3 +325,15 @@ nav a {
     }
 }
 
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #FFD700;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    z-index: 1000;
+}
+
