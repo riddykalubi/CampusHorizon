@@ -319,7 +319,7 @@ nav a {
 }
 
 @media (max-width: 600px) {
-    .overlay h2 {
+    .overlay h1 {
         font-size: 1.8rem;
         text-align: center;
     }
