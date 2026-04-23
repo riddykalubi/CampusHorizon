@@ -140,7 +140,7 @@ footer {
 .popup-content {
     background: white;
     padding-top: 100px;
-    width: 300px;
+    width: 100%;
     border-radius: 10px;
     text-align: center;
     transform: scale(0.7);
