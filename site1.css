@@ -172,7 +172,7 @@ footer {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    color: #002147;
+    color: #470000;
 }
 .popup.show .popup-content {
     transform: scale(1);
@@ -186,11 +186,7 @@ footer {
     padding: 10px;
 }
 
-.close {
-    float: right;
-    cursor: pointer;
-    font-size: 20px;
-}
+
 
 
 .overlay h2,
