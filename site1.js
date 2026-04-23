@@ -44,6 +44,7 @@ setInterval(() => {
 
 
 
+
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function(e){
@@ -53,17 +54,16 @@ form.addEventListener("submit", function(e){
     const email = document.querySelector("input[name='email']");
     const phone = document.querySelector("#phone");
 
-    // reset messages
     document.querySelectorAll(".error").forEach(el => el.remove());
 
     // EMAIL
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(!emailRegex.test(email.value)){
-        showError(email, "Email invalde");
+        showError(email, "Email invalide");
         valid = false;
     }
 
-    // PHONE
+    // TELEPHONE
     const phoneRegex = /^[0-9]{9}$/;
     if(!phoneRegex.test(phone.value)){
         showError(phone, "Numéro invalide");
@@ -73,24 +73,6 @@ form.addEventListener("submit", function(e){
     if(!valid){
         e.preventDefault();
         return;
-    }
-
-});
-
-function showError(input, message){
-    const error = document.createElement("small");
-    error.className = "error";
-    error.style.color = "red";
-    error.textContent = message;
-
-    input.parentNode.appendChild(error);
-}
-form.addEventListener("submit", function(e){
-
-    // validation ici...
-
-    if(valid){
-        localStorage.setItem("joined", "true");
     }
 
 });
