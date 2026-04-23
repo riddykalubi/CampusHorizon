@@ -158,12 +158,27 @@ footer {
     
 
     max-height: 85vh;
-    overflow-y: auto;
-
    
     
     
 
+}
+.iti__country-list {
+    z-index: 3000 !important;
+}
+
+.iti {
+    width: 100%;
+}
+
+
+.popup-content {
+    overflow: visible;
+}
+
+form {
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .close {
