@@ -138,11 +138,12 @@ footer {
 }
 
 .popup-content {
-    background: white;
+    background: black;
     padding-top: 100px;
     width: 100%;
     border-radius: 10px;
     text-align: center;
+    color:#FFD700;
     transform: scale(0.7);
     opacity: 0;
     transition: 0.3s;
