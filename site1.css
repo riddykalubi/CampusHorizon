@@ -138,48 +138,15 @@ footer {
     z-index: 2000; 
 }
 
-.popup-content {
-    background: black;
-    padding-top: 120px;
-    
-    border-radius: 10px;
-    text-align: center;
-    color:#FFD700;
-    transform: scale(0.7);
-    opacity: 0;
-    transition: 0.3s;
 
-    
-    
-    
-    width: 90%;
-    max-width: 500px; 
-    
-    
 
-    max-height: 85vh;
-   
-    position: relative;
-    
-
-}
-.iti__country-list {
-    z-index: 3000 !important;
-}
-
-.iti {
-    width: 100%;
-}
 
 
 .popup-content {
     overflow: visible;
 }
 
-form {
-    max-height: 70vh;
-    overflow-y: auto;
-}
+
 
 .close {
     position: absolute;
@@ -368,9 +335,7 @@ form {
     overflow-y: auto;
 }
 
-.iti__country-list {
-    z-index: 9999 !important;
-}
+
 .sexe {
   display: flex;
   flex-direction: column; /* 🔥 IMPORTANT */
@@ -382,4 +347,35 @@ form {
 .radio-box {
     width: 100%;
     box-sizing: border-box;
+}
+
+
+.popup-content {
+    background: black;
+    padding-top: 120px;
+    
+    border-radius: 10px;
+    text-align: center;
+    color:#FFD700;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.3s;
+
+    
+    
+    
+    width: 90%;
+    max-width: 500px; 
+    
+    
+
+    max-height: 85vh;
+   
+    position: relative;
+    overflow: visible;
+    position: relative;
+
+}
+.iti__country-list {
+    z-index: 3000 !important;
 }
