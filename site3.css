@@ -671,15 +671,17 @@ nav a {
 
 /* HEADER */
 header {
-    position: -webkit-sticky;
-    position: stiky;
+    
+    position: fixed;
     top: 0;
     width: 100%;
     background: rgba(0, 33, 71, 0.9);
     color: white;
-    padding: 15px;
+    padding: 10px;
     z-index: 1000;
 }
+
+
 
 /* FOOTER */
 footer {
