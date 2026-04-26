@@ -3,6 +3,10 @@ body {
     margin: 0;
     
 }
+nav a.active {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
 
 
 header {
