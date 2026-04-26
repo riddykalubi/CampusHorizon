@@ -9,7 +9,10 @@ header .btn{
     top: 0px;
     right: 20px;
     
-    
+    nav a.active {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
     padding: 12px 25px;
     background: linear-gradient(#FFD700, #FFA500);
     color: black;
