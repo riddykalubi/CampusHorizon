@@ -559,7 +559,7 @@ nav a {
     color: white;
 }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
 
     header {
         flex-direction: column;
@@ -651,7 +651,7 @@ h3 {
 
 /* TEXTE */
 p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-bottom: 10px;
 }
 
@@ -671,7 +671,7 @@ nav a {
 
 /* HEADER */
 header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     background: rgba(0, 33, 71, 0.9);
