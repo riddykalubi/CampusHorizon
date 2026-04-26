@@ -5,7 +5,10 @@
     Box-sizing : border-box ;
     Font-family : « Segoe UI », sans-serif ;
 }
-
+nav a.active {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
 /* CONTAINER */
 .contact-container {
     Padding : 150px 10% ;
