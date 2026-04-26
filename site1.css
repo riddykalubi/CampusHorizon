@@ -442,7 +442,8 @@ nav a {
 
 /* HEADER */
 header {
-    position: relative;
+    position: -webkit-sticky;
+    position: stiky;
     top: 0;
     width: 100%;
     background: rgba(0, 33, 71, 0.9);
