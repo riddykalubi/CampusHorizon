@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.intlTelInput(phoneInput, {
             initialCountry: "cd",
             separateDialCode: true,
-            dropdownContainer: document.body, 
+             
             autoPlaceholder: "aggressive"
         });
     }
