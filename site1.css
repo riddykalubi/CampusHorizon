@@ -466,7 +466,7 @@ form {
 
 .iti__country-list {
     z-index: 9999 !important;
-    position: fixed !important; /* Force la liste à se détacher du flux du formulaire */
+    position: fixed !important; 
 }
     section {
         padding: 15px;
