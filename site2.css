@@ -475,7 +475,12 @@ li::marker {
     
     }
 
-
+section .hero {
+    height: 70%;
+    width: 30%;
+    
+    background: url("IMG-20260406-WA0013.jpg") no-repeat center/cover;
+}
 
     /* RESET */
 * {
@@ -507,6 +512,7 @@ section {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding-top:180px;
 }
 
 /* TITRES */
