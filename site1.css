@@ -387,6 +387,26 @@ form {
     z-index: 3000 !important;
 }
 
+.iti {
+    width: 100%;
+}
+
+.iti__country-list {
+    z-index: 9999 !important;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sexe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 @media (max-width: 768px) {
 
     body {
