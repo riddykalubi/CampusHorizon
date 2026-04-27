@@ -57,3 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+const phoneInput = document.querySelector("#phone");
+if (phoneInput) {
+    window.intlTelInput(phoneInput, {
+        initialCountry: "cd",
+        separateDialCode: true, // Affiche le code à côté du drapeau
+        // Cette option aide sur mobile pour que la liste soit bien centrée
+        fixedCenter: true, 
+        autoPlaceholder: "aggressive",
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js"
+    });
+}
