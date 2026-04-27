@@ -77,6 +77,14 @@ form.addEventListener("submit", function(e){
 
 });
 
+const input = document.querySelector("#phone");
+window.intlTelInput(input, {
+    initialCountry: "cd",
+    separateDialCode: true,
+    // Cette ligne est la clé :
+    dropdownContainer: document.body 
+});
+
 
 
 
