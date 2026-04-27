@@ -217,9 +217,35 @@ nav a.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
 .iti--container { 
     z-index: 999999 !important; 
 }
-.iti__country-list { 
-    background-color: white !important; 
-    color: black !important; 
+/* Force la liste des pays à être opaque et lisible */
+.iti__country-list {
+    background-color: #ffffff !important; /* Fond blanc pur */
+    color: #000000 !important;           /* Texte noir pour contraste */
+    border: 1px solid #ccc !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+    max-width: 300px !important;         /* Évite que ça prenne toute la largeur */
+    z-index: 10000 !important;           /* Passe au-dessus de tout */
+}
+
+/* Style des éléments dans la liste */
+.iti__country {
+    padding: 10px !important;
+    background-color: #ffffff !important;
+}
+
+/* Changement de couleur au survol */
+.iti__country:hover {
+    background-color: #f0f0f0 !important;
+}
+
+/* S'assurer que le nom du pays est visible */
+.iti__country-name {
+    color: #333 !important;
+}
+
+/* Correction pour mobile : évite que le formulaire coupe la liste */
+.popup-content, .form-container {
+    overflow: visible !important;
 }
 
 .close { position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer; color: white; }
