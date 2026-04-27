@@ -727,3 +727,58 @@ nav a.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
 }
 
 .close { position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer; color: white; }
+
+
+/* Donne de l'espace au texte pour ne pas toucher le drapeau */
+.iti {
+    width: 100%;
+}
+
+.iti input {
+    padding-left: 95px !important; /* Force l'espace pour le drapeau et le code */
+    width: 100% !important;
+}
+
+/* Nettoie l'affichage du code pays pour éviter le doublement visuel */
+.iti__selected-dial-code {
+    margin-left: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* On s'assure que la liste ne s'ouvre pas n'importe comment */
+.iti__country-list {
+    z-index: 10000 !important;
+    background-color: white !important;
+}
+
+/* Empêche le formulaire de couper la liste des pays */
+.popup-content, 
+.form-container, 
+#popup {
+    overflow: visible !important;
+}
+
+/* On s'assure que le formulaire lui-même reste scrollable si le contenu est long */
+.form-container {
+    max-height: 80vh;
+    overflow-y: auto !important;
+    /* Ajoute ceci pour permettre le scroll fluide sur mobile */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Style de la liste pour qu'elle soit scrollable à l'intérieur */
+.iti__country-list {
+    background-color: white !important;
+    color: black !important;
+    max-height: 200px !important; /* Hauteur max de la liste elle-même */
+    overflow-y: auto !important;  /* Active le scroll interne à la liste */
+    z-index: 10000 !important;
+    position: absolute !important; 
+}
+
+/* Correction pour mobile : évite que la liste soit trop large */
+.iti {
+    width: 100% !important;
+    display: block !important;
+}
