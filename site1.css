@@ -458,6 +458,16 @@ form {
     overflow-y: auto;
     padding: 20px;
 }
+
+  
+    overflow: visible !important; 
+}
+
+
+.iti__country-list {
+    z-index: 9999 !important;
+    position: fixed !important; /* Force la liste à se détacher du flux du formulaire */
+}
     section {
         padding: 15px;
     }
