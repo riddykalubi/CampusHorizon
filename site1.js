@@ -83,6 +83,8 @@ window.intlTelInput(input, {
     separateDialCode: true,
     // Cette ligne est la clé :
     dropdownContainer: document.body 
+
+    autoPlaceholder: "aggressive"
 });
 
 
