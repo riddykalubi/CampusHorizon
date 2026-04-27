@@ -463,8 +463,12 @@ form {
     overflow: visible !important; 
 }
 
+.iti--container {
+    z-index:999999 !important ;
 
 .iti__country-list {
+    backgrouund-color: white;
+    color:black;
     z-index: 9999 !important;
     position: fixed !important; 
 }
