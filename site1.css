@@ -777,8 +777,9 @@ nav a.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
     position: absolute !important; 
 }
 
-/* Correction pour mobile : évite que la liste soit trop large */
+@media (max-width: 768px){
 .iti {
     width: 100% !important;
     display: block !important;
+}
 }
